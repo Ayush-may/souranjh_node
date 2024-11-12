@@ -1,0 +1,568 @@
+/* General Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Header Styles */
+header {
+  background-color: #4bcffa;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 10;
+}
+
+/* Menu Styles */
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  display: inline-block;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.menu a:hover {
+  color: #95afc0;
+}
+
+/* Search Icon and Input Styles */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px; /* Add space between input and button */
+}
+
+.search-icon {
+  background-color: #95afc0;
+  border: none;
+  color: white;
+  padding: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+/* Search Icon Hover Effect */
+.search-icon:hover {
+  background-color: #7f97b0;
+}
+
+  
+.hero {
+  position: relative;
+  background: grey;
+  background-size: cover;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.overlay {
+  padding: 50px;
+  border-radius: 10px;
+}
+h1 {
+  font-size: 3em;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+p {
+  font-size: 1.5em;
+  margin-bottom: 40px;
+  font-family: 'Arial', sans-serif;
+}
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: grey; /* Call-to-action button color */
+  color: white;
+  font-size: 1.2em;
+  font-family: 'Arial', sans-serif;
+  text-decoration: none;
+  margin: 0 10px;
+  border-radius: 50px; /* Makes the corners fully rounded */
+  transition: background-color 0.3s ease;
+  border: 2px solid black; /* Thinner outline around the button */
+}
+.cta-button:hover {
+  background-color: #333333; /* Darker shade on hover */
+  }
+@media (max-width: 768px) {
+  h1 {
+      font-size: 2.5em;
+  }
+  p {
+      font-size: 1.2em;
+  }
+  .cta-button {
+      font-size: 1em;
+      padding: 10px 20px;
+  }
+}
+.visitor-counter {
+  background-color: #f2f2f2; /* Light gray background */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Padding for spacing */
+  text-align: center; /* Center the text */
+  margin: 20px auto; /* Center the section on the page */
+  max-width: 300px; /* Max width for the counter */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+.visitor-counter h2 {
+  font-size: 1.5rem; /* Font size for heading */
+  margin-bottom: 10px; /* Space below the heading */
+  color: #333; /* Dark text color */
+}
+.count {
+  font-size: 2rem; /* Larger font size for the count */
+  font-weight: bold; /* Bold text */
+  color: #3498db; /* Blue color for the count */
+}
+/* Style the main container */
+
+.full-width-image {
+  position: relative;
+  width: 100%;
+  height: 80%; /* Adjust height as needed */
+  overflow: hidden;
+}
+.full-width-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.customer-comment {
+  position: absolute;
+  bottom: -50px; /* Adjust this value to control how much it extends below the image */
+  right: 0; /* Align to the right */
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 300px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(20px); /* Slide-in effect from the bottom */
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+/* Each comment will slide up into view */
+.customer-comment.comment1 {
+  animation: fadeInOut 20s infinite;
+}
+
+.customer-comment.comment2 {
+  animation: fadeInOut 20s infinite 5s; /* Delayed by 5 seconds */
+}
+
+.customer-comment.comment3 {
+  animation: fadeInOut 20s infinite 10s; /* Delayed by 10 seconds */
+}
+
+.customer-comment.comment4 {
+  animation: fadeInOut 20s infinite 15s; /* Delayed by 15 seconds */
+}
+
+/* Dots styling inside comment */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px; /* Space between text and dots */
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb; /* Inactive dot color */
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.5s ease;
+}
+
+.dot.active {
+  background-color: #fff; /* Active dot color */
+}
+/* Keyframes for fade-in and fade-out */
+@keyframes fadeInOut {
+  0%, 25% {
+      opacity: 0;
+      transform: translateY(20px); /* Start hidden and slightly down */
+  }
+  30%, 45% {
+      opacity: 1;
+      transform: translateY(0); /* Fully visible */
+  }
+  50%, 100% {
+      opacity: 0;
+      transform: translateY(20px); /* Hide and slide down again */
+  }
+}
+h2 {
+  margin-top: 0; /* Remove margin from top */
+}
+.box-container {
+  display: flex;
+  justify-content: space-around; /* Space between the boxes */
+  flex-wrap: wrap; /* Wrap boxes on smaller screens */
+  padding: 20px;
+  margin-top: 8%;
+}
+.box {
+  border: 2px solid grey; /* Black border */
+  color:black; /* White text color */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+  text-align: center;
+  padding: 20px;
+  width: 250px; /* Fixed width for each box */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+.box-img {
+  width: 80%; /* Image takes full width of the box */
+  height: 100px; /* Adjust height as needed */
+  object-fit: cover; /* Ensures image covers the space */
+  border-radius: 8px; /* Rounds the image corners */
+  margin-bottom: 15px; /* Space between image and text */
+}
+.box h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+.box p {
+  font-size: 1rem;
+  }
+.box:hover {
+  transform: translateY(-10px); /* Moves the box upwards on hover */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+}
+.black-box {
+  background-color: black;
+  color: white;
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 10px;
+  display: flex; /* Use flexbox for positioning */
+  justify-content: space-between; /* Space between left and right content */
+  align-items: center; /* Center vertically */
+  text-align: left; /* Align text to the left */
+  height: 40%;
+}
+.black-box p {
+  font-size: 2rem;
+  width: 40%; /* Set to half width of the black box */
+  font-style:oblique
+}
+.contact-info {
+  width: 50%; /* Set to half width for the right side content */
+  text-align: left; /* Align text to the right */
+}
+.contact-info h2 {
+  font-size: 2rem; /* Customize heading size */
+}
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1.2rem; /* Customize contact text size */
+}
+.contact-info .phone-icon {
+  font-size: 1.5rem;
+  margin-right: 10px; /* Space between icon and text */
+}
+
+
+/* Styles for the list container */
+/* Flexbox container for the sections */
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.grey {
+  width: 100%;
+  height: 60%;
+  font-family: 'Arial', sans-serif;
+  background-color: grey; /* Light background color for contrast */
+  color: black; /* Dark text color for readability */
+  margin-bottom: 0;
+}
+ul.box1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  }
+ul.box1 li {
+  margin-top: 9%;
+  width: 50%;
+  padding: 20px;
+  background-color:grey;
+  border-radius: 10px;
+  text-align: center;
+}
+.divider-link {
+  margin-top: 30%;
+  display: inline-block;
+  width: 2px;
+  height: 200px;
+  background-color: black;
+  text-decoration: none; /* Remove underline if the anchor tag is treated as a link */
+  pointer-events: none; /* Makes it non-clickable */
+}
+.box2, .box3 {
+  display: flex; /* Enable flexbox */
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center; /* Center vertically (if height is set) */
+  margin-top: 20px; /* Optional margin for spacing */
+  padding-left: 40%; /* Add padding to create space from the left */
+}
+.box2 a, .box3 a {
+  align-items: center;
+  display: inline-block;
+  padding: 10px 18px;
+  border: 1.5px solid black; 
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+.box2 a:hover, .box3 a:hover {
+  background-color: #2980b9;
+}
+.scrolling-text {
+  width: 100%; /* Set the width of the container */
+  height: 20%;
+  overflow: hidden;
+  white-space: nowrap;
+  direction: rtl; /* Set direction to right-to-left */
+  font-size: 50px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+.scrolling-text p {
+  display: inline-block;
+  animation: scroll 30s linear infinite;
+  margin-top: 1%;
+
+}
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+.scroll
+{
+  list-style: none;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #000;
+  background-color:#ffff;
+  margin:5px;
+  text-align: center;
+  line-height: 50px;
+  margin-left: 5px;
+  float: left;
+  margin-top: 1px;
+  margin-bottom: 2%;
+  margin-left: 12%;
+} 
+.box6 {
+  margin-top: -5%;
+  width: 100%;
+  height: 70%;
+  background-color: #333;
+}
+
+/* General Footer Styling */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer-links, .footer-contact, .footer-social {
+  width: 25%;
+}
+
+.footer-links h3, .footer-contact h3, .footer-social h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.footer-links ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin: 8px 0;
+}
+
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9em;
+  transition: color 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+  color: #a1c4fd;
+}
+
+.footer-contact p {
+  font-size: 1em;
+}
+
+.footer-social a {
+  margin-right: 10px;
+}
+
+.footer-social a img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.3s ease;
+}
+
+.footer-social a img:hover {
+  opacity: 0.7;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-links, .footer-contact, .footer-social {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-logo {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+
+/* General styles for the unordered list */
+ul.box1 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+ul.box1 li {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+/* Style for the headings */
+ul.box1 h2 {
+  font-size: 24px;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+/* Style for the paragraph text */
+ul.box1 p {
+  font-size: 16px;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Box styling */
+ul.box1 .box2, ul.box1 .box3 {
+  margin-top: 10px;
+}
+
+ul.box1 .box2 a, ul.box1 .box3 a {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #4CAF50;  /* Green background for buttons */
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+/* Hover effect for the button */
+ul.box1 .box2 a:hover, ul.box1 .box3 a:hover {
+  background-color: #45a049;  /* Darker green when hovered */
+}
+
+/* Vertical divider styling */
+ul.box4 {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.box4 li {
+  border-left: 2px solid #ccc;
+  height: 50px;  /* Adjust the height of the vertical line */
+  margin-left: 20px;
+}
+
+/* Divider link (it can be used for styling if necessary) */
+ul.box4 .divider-link {
+  display: block;
+  height: 100%;
+  width: 0;
+}
